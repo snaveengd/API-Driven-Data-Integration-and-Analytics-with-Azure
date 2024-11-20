@@ -18,7 +18,9 @@ Microsoft Power BI
 
 ## Architecture
 
-! API-Driven Data .drawio.png
+![Project Architecture](https://myoctocat.com/assets/images/base-octocat.svg)
+
+
 
 
 
