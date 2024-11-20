@@ -18,7 +18,7 @@ Microsoft Power BI
 
 ## Architecture
 
-![Project Architecture](Arch.jpg)
+![Project Architecture](arch.png)
 
 
 
