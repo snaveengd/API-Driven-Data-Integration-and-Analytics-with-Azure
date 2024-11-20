@@ -16,3 +16,7 @@ Microsoft Entra ID (Previously called as AAD) and
 
 Microsoft Power BI
 
+## Architecture
+
+
+
