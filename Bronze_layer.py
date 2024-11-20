@@ -9,7 +9,7 @@
 df_cal = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Calendar')
+            .load('abfss://bronze@storagedatalak.dfs.core.windows.net/AdventureWorks_Calendar')
 
 # COMMAND ----------
 
@@ -21,7 +21,7 @@ df_cal = spark.read.format('csv')\
 df_cus = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Customers')
+            .load('abfss://bronze@storagedatalak.dfs.core.windows.net/AdventureWorks_Customers')
 
 # COMMAND ----------
 
@@ -33,7 +33,7 @@ df_cus = spark.read.format('csv')\
 df_procat = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Product_Categories')
+            .load('abfss://bronze@storagedatalak.dfs.core.windows.net/AdventureWorks_Product_Categories')
 
 # COMMAND ----------
 
@@ -45,7 +45,7 @@ df_procat = spark.read.format('csv')\
 df_pro = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Products')
+            .load('abfss://bronze@storagedatalak.dfs.core.windows.net/AdventureWorks_Products')
 
 # COMMAND ----------
 
@@ -57,7 +57,7 @@ df_pro = spark.read.format('csv')\
 df_ret = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Returns')
+            .load('abfss://bronze@storagedatalak.dfs.core.windows.net/AdventureWorks_Returns')
 
 # COMMAND ----------
 
@@ -69,7 +69,7 @@ df_ret = spark.read.format('csv')\
 df_sales = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Sales*')
+            .load('abfss://bronze@storagedatalak.dfs.core.windows.net/AdventureWorks_Sales*')
 
 # COMMAND ----------
 
@@ -81,7 +81,7 @@ df_sales = spark.read.format('csv')\
 df_ter = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Territories')
+            .load('abfss://bronze@storagedatalak.dfs.core.windows.net/AdventureWorks_Territories')
 
 # COMMAND ----------
 
@@ -93,7 +93,7 @@ df_ter = spark.read.format('csv')\
 df_subcat = spark.read.format('csv')\
             .option("header",True)\
             .option("inferSchema",True)\
-            .load('abfss://bronze@anishlambastoragedatalak.dfs.core.windows.net/Product_Subcategories')
+            .load('abfss://bronze@ambastoragedatalak.dfs.core.windows.net/Product_Subcategories')
 
 # COMMAND ----------
 
@@ -125,7 +125,7 @@ df_cal.display()
 
 # COMMAND ----------
 
-df_cal.write.format("parquet").mode("overwrite").save("abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Calendars")
+df_cal.write.format("parquet").mode("overwrite").save("abfss://silver@storagedatalak.dfs.core.windows.net/AdventureWorks_Calendars")
 
 # COMMAND ----------
 
@@ -150,7 +150,7 @@ df_cus.display()
 
 # COMMAND ----------
 
-df_cus.write.format("parquet").mode("overwrite").save("abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Customerss")
+df_cus.write.format("parquet").mode("overwrite").save("abfss://silver@storagedatalak.dfs.core.windows.net/AdventureWorks_Customerss")
 
 # COMMAND ----------
 
@@ -163,7 +163,7 @@ df_procat.display()
 
 # COMMAND ----------
 
-df_procat.write.format("parquet").mode("overwrite").save("abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Product_Categories")
+df_procat.write.format("parquet").mode("overwrite").save("abfss://silver@storagedatalak.dfs.core.windows.net/AdventureWorks_Product_Categories")
 
 # COMMAND ----------
 
@@ -185,7 +185,7 @@ df_pro.display()
 
 # COMMAND ----------
 
-df_pro.write.format("parquet").mode("overwrite").save("abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Products")
+df_pro.write.format("parquet").mode("overwrite").save("abfss://silver@storagedatalak.dfs.core.windows.net/AdventureWorks_Products")
 
 # COMMAND ----------
 
@@ -198,7 +198,7 @@ df_ret.display()
 
 # COMMAND ----------
 
-df_ret.write.format("parquet").mode("overwrite").save("abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Returns")
+df_ret.write.format("parquet").mode("overwrite").save("abfss://silver@storagedatalak.dfs.core.windows.net/AdventureWorks_Returns")
 
 # COMMAND ----------
 
@@ -225,7 +225,7 @@ df_sales = df_sales.withColumn('multiply',col('OrderLineItem')*col('OrderQuantit
 
 df_sales.write.format('parquet')\
             .mode('append')\
-            .option("path","abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Sales")\
+            .option("path","abfss://silver@storagedatalak.dfs.core.windows.net/AdventureWorks_Sales")\
             .save()
 
 # COMMAND ----------
@@ -247,7 +247,7 @@ df_ter.display()
 
 # COMMAND ----------
 
-df_ter.write.format("parquet").mode("overwrite").save("abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/AdventureWorks_Territories")
+df_ter.write.format("parquet").mode("overwrite").save("abfss://silver@storagedatalak.dfs.core.windows.net/AdventureWorks_Territories")
 
 # COMMAND ----------
 
@@ -260,4 +260,4 @@ df_subcat.display()
 
 # COMMAND ----------
 
-df_subcat.write.format("parquet").mode("overwrite").save("abfss://silver@anishlambastoragedatalak.dfs.core.windows.net/Product_Subcategories")
+df_subcat.write.format("parquet").mode("overwrite").save("abfss://silver@storagedatalak.dfs.core.windows.net/Product_Subcategories")
