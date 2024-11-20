@@ -9,12 +9,12 @@
 
 # COMMAND ----------
 
-storage_account_name = "anishlambastoragedatalak"
-container_name = "bronze"
-mount_point = "bronze"
-client_id = "8c5c8e5e-7341-49a4-802b-d687e7baad29"
-tenant_id = "6b5f1b61-1f3d-4861-a8f0-ea0991c04589"
-client_secret ="N5b8Q~FiL8o78lpiUYRgwuU6k1AfNyonL4fjTbLh"
+storage_account_name = "yourstoragename"
+container_name = "yourcontainer_name"
+mount_point = "yourmount_point"
+client_id = "client_id "
+tenant_id = "tenant_id"
+client_secret ="client_secret"
 
 # COMMAND ----------
 
