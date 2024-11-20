@@ -18,7 +18,10 @@ Microsoft Power BI
 
 ## Architecture
 
-![Project Architecture]([API-Driven Data .drawio.png](https://github.com/snaveengd/API-Driven-Data-Integration-and-Analytics-with-Azure/blob/main/API-Driven%20Data%20.drawio.png))
+![Project Architecture]((https://github.com/snaveengd/API-Driven-Data-Integration-and-Analytics-with-Azure/blob/main/API-Driven%20Data%20.drawio.png))
+
+![Project Architecture](API-Driven Data .drawio.png)
+
 
 
 
